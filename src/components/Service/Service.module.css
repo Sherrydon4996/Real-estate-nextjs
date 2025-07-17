@@ -1,0 +1,489 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80");
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.heroAnimation {
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.heroAnimationVisible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.premiumBadge {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.premiumBadge span {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(
+    to right,
+    rgba(245, 158, 11, 0.2),
+    rgba(217, 119, 6, 0.2)
+  );
+  color: rgb(251, 191, 36);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  line-height: 1;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: serif;
+}
+
+.heroDescription {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: rgb(209, 213, 219);
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  transform: translateX(300px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.statsVisible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.statItem {
+  text-align: center;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.statsVisible .statItem {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.statIconWrapper {
+  width: 4rem;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    to bottom right,
+    rgb(245, 158, 11),
+    rgb(217, 119, 6)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.statIcon {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.statNumber {
+  font-size: clamp(2.25rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-family: serif;
+}
+
+.statLabel {
+  color: rgb(251, 191, 36);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Services Section */
+.servicesSection {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom right,
+    rgb(248, 250, 252),
+    white,
+    rgb(243, 244, 246)
+  );
+}
+
+.servicesBackground {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.servicesHeader {
+  margin-bottom: 4rem;
+  text-align: center;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.servicesHeaderVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.servicesTitle {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin-bottom: 1.5rem;
+  font-family: serif;
+}
+
+.servicesDivider {
+  width: 6rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, rgb(245, 158, 11), rgb(217, 119, 6));
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.servicesDescription {
+  font-size: 1.125rem;
+  color: rgb(75, 85, 99);
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCardWrapper {
+  perspective: 1000px;
+}
+
+.zoomIn {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.flipIn {
+  transform: perspective(1000px) rotateX(-90deg);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.zoomInVisible {
+  transform: translateX(0) translateY(0) scale(1) rotateX(0deg);
+  opacity: 1;
+}
+
+.flipInVisible {
+  transform: translateX(0) translateY(0) scale(1) rotateX(0deg “‘”);
+  opacity: 1;
+}
+
+.serviceCard {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.serviceCard:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.serviceCard:hover .serviceGradient {
+  opacity: 0.05;
+}
+
+.serviceCard:hover .serviceTopBorder {
+  transform: scaleX(1);
+}
+
+.serviceCard:hover .serviceIconWrapper {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.serviceGradient {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceTopBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: var(--gradient);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.serviceIconContainer {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.serviceIconWrapper {
+  width: 5rem;
+  height: 5rem;
+  background: var(--gradient);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.serviceDescription {
+  color: rgb(75, 85, 99);
+  margin-bottom: 1.5rem;
+  line-height: 1.625;
+}
+
+.serviceFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.serviceFeature {
+  display: flex;
+  align-items: center;
+  color: rgb(75, 85, 99);
+}
+
+.featureDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.serviceFeature span {
+  font-size: 0.875rem;
+}
+
+.serviceButton {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.serviceButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.serviceButton:hover .buttonIcon {
+  transform: translateX(0.25rem);
+}
+
+.buttonIcon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* CTA Section */
+.ctaSection {
+  position: relative;
+  padding: 6rem 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80");
+  text-align: center;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+}
+
+.ctaContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.ctaContent {
+  transform: translateX(300px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.ctaContentVisible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.ctaTitle {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: serif;
+}
+
+.ctaDescription {
+  font-size: 1.25rem;
+  color: rgb(209, 213, 219);
+  margin-bottom: 2rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .ctaButtons {
+    flex-direction: column;
+  }
+}
+
+.ctaPrimaryButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, rgb(245, 158, 11), rgb(217, 119, 6));
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ctaSecondaryButton {
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}

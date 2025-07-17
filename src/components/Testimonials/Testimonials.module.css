@@ -1,0 +1,191 @@
+.testimonialsSection {
+  position: relative;
+  background: linear-gradient(to bottom right, rgb(249, 250, 251), white);
+  padding: 6rem 0;
+}
+
+.testimonialsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.testimonialsContent {
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: all 1000ms ease;
+}
+
+.testimonialsVisible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.testimonialsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.testimonialsSubtitle {
+  color: rgb(217, 119, 6);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.testimonialsTitle {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  line-height: 1;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: serif;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1000ms ease;
+}
+
+.testimonialsVisible .testimonialsTitle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .testimonialsTitle {
+    font-size: clamp(2.25rem, 5vw, 3rem);
+  }
+}
+
+.testimonialsDivider {
+  width: 5rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, rgb(245, 158, 11), rgb(217, 119, 6));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .testimonialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonialsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonialItem {
+  transition: all 700ms ease;
+}
+
+.testimonialLeft {
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+.testimonialLeftVisible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.testimonialUp {
+  transform: translateY(300px);
+  opacity: 0;
+}
+
+.testimonialUpVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.testimonialRight {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.testimonialRightVisible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.testimonialCard {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonialItem:hover .testimonialCard {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.testimonialAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(to right, rgb(245, 158, 11), rgb(217, 119, 6));
+}
+
+.testimonialStars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.starIcon {
+  color: rgb(245, 158, 11);
+  fill: currentColor;
+}
+
+.testimonialText {
+  color: rgb(55, 65, 81);
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorImage {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.authorName {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin-bottom: 0.25rem;
+}
+
+.authorRole {
+  color: rgb(217, 119, 6);
+  font-size: 0.875rem;
+  line-height: 1;
+}

@@ -1,0 +1,248 @@
+.footer {
+  background: var(--primary-color);
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.companyInfo h3 {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.companyInfo p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.contactItem svg {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.footerSection h4 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection li {
+  margin-bottom: 0.75rem;
+}
+
+.footerSection button {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+  text-align: left;
+  width: 100%;
+}
+
+.footerSection button:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.footerSection p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.emailInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.subscribeButton {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.subscribeButton:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition-smooth);
+  font-size: 1.1rem;
+}
+
+.socialLink:hover {
+  background: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.copyright p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.legalLinks a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  transition: var(--transition-smooth);
+}
+
+.legalLinks a:hover {
+  color: var(--secondary-color);
+}
+
+.backToTop {
+  width: 50px;
+  height: 50px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.backToTop:hover {
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .copyright {
+    align-items: center;
+  }
+
+  .legalLinks {
+    gap: 1rem;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .legalLinks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contactInfo {
+    gap: 0.5rem;
+  }
+
+  .contactItem {
+    font-size: 0.8rem;
+  }
+}
