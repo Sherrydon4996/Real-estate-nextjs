@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: "David Thompson",
       role: "Property Investor",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "/T1image.jpg",
       text: "Prestige Properties helped me build a diverse real estate portfolio. Their market insights are invaluable.",
       rating: 5,
     },
@@ -24,7 +24,7 @@ const Testimonials = () => {
       name: "Lisa Martinez",
       role: "Homeowner",
       image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "/T2image.jpg",
       text: "The team made buying our dream home effortless. Professional, knowledgeable, and truly caring.",
       rating: 5,
     },
@@ -32,7 +32,7 @@ const Testimonials = () => {
       name: "Robert Kim",
       role: "Business Owner",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "/T3image.jpg",
       text: "Outstanding service from start to finish. They understood our needs and delivered beyond expectations.",
       rating: 5,
     },

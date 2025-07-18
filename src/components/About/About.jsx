@@ -43,19 +43,19 @@ const About = () => {
 
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Keith Johnson",
       role: "Founder & CEO",
       image: "/TeamMember1.jpg",
       bio: "With over 20 years in luxury real estate, Sarah has built Prestige Properties into a leading firm.",
     },
     {
-      name: "Michael Chen",
+      name: "Sarah Michael",
       role: "Senior Partner",
       image: "/teamMember2.jpg",
       bio: "Michael specializes in high-end commercial properties and investment opportunities.",
     },
     {
-      name: "Emily Rodriguez",
+      name: "John Rodriguez",
       role: "Director of Sales",
       image: "/teamMember3.jpg",
       bio: "Emily leads our residential sales team with expertise in luxury home markets.",
