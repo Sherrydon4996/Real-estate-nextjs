@@ -78,8 +78,7 @@ const FeaturedProperties = () => {
       baths: 4,
       sqft: "4,200",
       type: "villa",
-      image:
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property1.jpg",
       featured: true,
       description:
         "Stunning modern villa with panoramic city views, featuring high-end finishes and smart home technology.",
@@ -101,8 +100,7 @@ const FeaturedProperties = () => {
       baths: 3,
       sqft: "2,800",
       type: "penthouse",
-      image:
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property2.jpg",
       featured: true,
       description:
         "Luxurious penthouse in the heart of Manhattan with breathtaking skyline views and premium amenities.",
@@ -124,8 +122,7 @@ const FeaturedProperties = () => {
       baths: 5,
       sqft: "5,500",
       type: "estate",
-      image:
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property3.jpg",
       featured: true,
       description:
         "Spectacular oceanfront estate with private beach access, infinity pool, and world-class entertaining spaces.",
@@ -147,8 +144,7 @@ const FeaturedProperties = () => {
       baths: 3,
       sqft: "3,200",
       type: "townhouse",
-      image:
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property4.jpg",
       featured: false,
       description:
         "Elegant townhouse in historic Georgetown with modern updates and charming original details.",
@@ -170,8 +166,7 @@ const FeaturedProperties = () => {
       baths: 2,
       sqft: "1,800",
       type: "condo",
-      image:
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property5.jpg",
       featured: false,
       description:
         "Sophisticated beachfront condo with floor-to-ceiling windows and resort-style amenities.",
@@ -193,8 +188,7 @@ const FeaturedProperties = () => {
       baths: 6,
       sqft: "6,800",
       type: "mansion",
-      image:
-        "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property6.jpg",
       featured: false,
       description:
         "Magnificent antebellum mansion meticulously restored with period details and modern conveniences.",
@@ -219,8 +213,7 @@ const FeaturedProperties = () => {
       baths: 4,
       sqft: "3,800",
       type: "penthouse",
-      image:
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property7.jpg",
       featured: true,
       description:
         "Contemporary waterfront penthouse with panoramic Sound views and premium finishes throughout.",
@@ -242,8 +235,7 @@ const FeaturedProperties = () => {
       baths: 7,
       sqft: "7,200",
       type: "estate",
-      image:
-        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/property8.jpg",
       featured: true,
       description:
         "Spectacular mountain estate with ski-in/ski-out access and breathtaking alpine views.",

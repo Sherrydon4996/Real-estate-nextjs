@@ -25,19 +25,19 @@ const About = () => {
   const partners = [
     {
       name: "Luxury Estates",
-      logo: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      logo: "/logo1.jpg",
     },
     {
       name: "Elite Properties",
-      logo: "https://images.unsplash.com/photo-1560523159-4a9692d222ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      logo: "/logopartner2.jpg",
     },
     {
       name: "Prime Realty",
-      logo: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      logo: "/logopartner3.jpg",
     },
     {
       name: "Global Homes",
-      logo: "https://images.unsplash.com/photo-1560523159-4a9692d222ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      logo: "/logopartner4.jpg",
     },
   ];
 
@@ -45,22 +45,19 @@ const About = () => {
     {
       name: "Sarah Johnson",
       role: "Founder & CEO",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/TeamMember1.jpg",
       bio: "With over 20 years in luxury real estate, Sarah has built Prestige Properties into a leading firm.",
     },
     {
       name: "Michael Chen",
       role: "Senior Partner",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/teamMember2.jpg",
       bio: "Michael specializes in high-end commercial properties and investment opportunities.",
     },
     {
       name: "Emily Rodriguez",
       role: "Director of Sales",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/teamMember3.jpg",
       bio: "Emily leads our residential sales team with expertise in luxury home markets.",
     },
   ];
@@ -178,7 +175,7 @@ const About = () => {
               <div className={styles.storyImageBackground}></div>
               <div className={styles.storyImageContainer}>
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="/servicesImage2.jpg"
                   alt="Prestige Properties Office"
                   className={styles.storyImage}
                 />

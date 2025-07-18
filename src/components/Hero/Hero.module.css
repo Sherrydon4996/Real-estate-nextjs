@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: url("/fallback-image2.jpeg") !important; /* Dark background to prevent white flash */
+  background: url("/fallback-image2.jpeg") ; /* Dark background to prevent white flash */
   padding-top: clamp(100px, 12vh, 140px); /* Space for header */
   padding-bottom: clamp(60px, 8vh, 100px); /* Space at bottom */
 }

@@ -11,8 +11,7 @@ const Hero = () => {
   // High-quality real estate images with different focal points
   const slides = [
     {
-      image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "/landingPage1.jpg",
       alt: "Luxury modern home with pool",
       title: "Finding Your Next",
       subtitle: "Home Is Simple",
@@ -20,8 +19,7 @@ const Hero = () => {
         "Experience luxury living with our exclusive collection of premium properties.",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "/landingPage2.jpg",
       alt: "Elegant contemporary mansion",
       title: "Discover Your",
       subtitle: "Dream Property",
