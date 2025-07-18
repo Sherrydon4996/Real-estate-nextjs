@@ -8,6 +8,13 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
+  function handleHomeButtons(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   // High-quality real estate images with different focal points
   const slides = [
     {
@@ -36,7 +43,7 @@ const Hero = () => {
   }, [slides.length]);
 
   return (
-    <section className={styles.hero} ref={ref}>
+    <section className={styles.hero} ref={ref} id="home">
       {/* Sliding Background Images */}
       <div className={styles.sliderContainer}>
         {slides.map((slide, index) => (
@@ -71,13 +78,13 @@ const Hero = () => {
               <p className={styles.heroSubtitle}>{slide.description}</p>
               <div className={styles.heroActions}>
                 <button
-                  // onClick={scrollToProperties}
+                  onClick={() => handleHomeButtons("properties")}
                   className={styles.primaryAction}
                 >
                   Explore Properties <FiArrowRight />
                 </button>
                 <button
-                  // onClick={scrollToContact}
+                  onClick={() => handleHomeButtons("gallery")}
                   className={styles.secondaryAction}
                 >
                   <FiPlay /> Watch Tour

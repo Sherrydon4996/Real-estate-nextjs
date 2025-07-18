@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: url("/fallback-image2.jpeg") ; /* Dark background to prevent white flash */
+  background: url("/fallback-image2.jpeg"); /* Dark background to prevent white flash */
   padding-top: clamp(100px, 12vh, 140px); /* Space for header */
   padding-bottom: clamp(60px, 8vh, 100px); /* Space at bottom */
 }
@@ -116,8 +116,6 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Remove stats styles - no longer needed */
-
 .heroActions {
   display: flex;
   gap: clamp(1.25rem, 2.8vw, 1.8rem);
@@ -126,16 +124,17 @@
 
 .primaryAction,
 .secondaryAction {
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  padding: clamp(1rem, 2.2vw, 1.4rem) clamp(1.75rem, 3.2vw, 2.25rem);
+  font-size: 1.1rem;
+  padding: 1.4rem 2.25rem;
   border-radius: 4px;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: clamp(8px, 1.5vw, 10px);
+  gap: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  min-width: 180px;
 }
 
 .primaryAction {
@@ -255,16 +254,45 @@
   }
 }
 
-/* Responsive breakpoints for fine-tuning */
-@media (max-width: 1024px) {
+/* Desktop and Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  .primaryAction,
+  .secondaryAction {
+    font-size: 1.2rem;
+    padding: 1.5rem 2.5rem;
+    min-width: 200px;
+  }
+}
+
+/* Large Laptops (1200px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .primaryAction,
+  .secondaryAction {
+    font-size: 1.1rem;
+    padding: 1.3rem 2.2rem;
+    min-width: 185px;
+  }
+}
+
+/* Standard Laptops (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
   .hero {
     height: 100vh;
     padding-top: clamp(90px, 10vh, 120px);
     padding-bottom: clamp(50px, 6vh, 80px);
   }
+
+  .primaryAction,
+  .secondaryAction {
+    font-size: 1rem;
+    padding: 1.2rem 2rem;
+    min-width: 170px;
+    gap: 8px;
+  }
 }
 
-@media (max-width: 768px) {
+/* Small Laptops and Large Tablets (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
   .hero {
     height: 100vh;
     padding-top: clamp(80px, 8vh, 100px);
@@ -283,39 +311,101 @@
   .heroActions {
     justify-content: center;
   }
+
+  .primaryAction,
+  .secondaryAction {
+    font-size: 0.95rem;
+    padding: 1.1rem 1.8rem;
+    min-width: 160px;
+    gap: 8px;
+  }
 }
 
-@media (max-width: 640px) {
+/* Tablets (640px - 767px) */
+@media (max-width: 767px) and (min-width: 640px) {
   .hero {
     padding-top: clamp(70px, 6vh, 90px);
     padding-bottom: clamp(30px, 4vh, 50px);
   }
 
+  .heroContent {
+    text-align: center;
+  }
+
+  .heroSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .heroActions {
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .primaryAction,
   .secondaryAction {
-    width: 100%;
-    max-width: clamp(260px, 80vw, 320px);
-    justify-content: center;
+    font-size: 0.9rem;
+    padding: 1rem 1.5rem;
+    min-width: 150px;
+    gap: 6px;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile Landscape (481px - 639px) */
+@media (max-width: 639px) and (min-width: 481px) {
   .hero {
     padding-top: clamp(60px, 5vh, 80px);
     padding-bottom: clamp(25px, 3vh, 40px);
   }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    font-size: 0.9rem;
+    padding: 1rem 1.4rem;
+    width: 100%;
+    max-width: 280px;
+    min-width: unset;
+    justify-content: center;
+    gap: 6px;
+  }
 }
 
-/* Very small screens */
-@media (max-width: 360px) {
+/* Mobile Portrait (361px - 480px) */
+@media (max-width: 480px) and (min-width: 361px) {
   .hero {
     padding-top: clamp(55px, 4vh, 70px);
     padding-bottom: clamp(20px, 2vh, 35px);
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    font-size: 0.85rem;
+    padding: 0.9rem 1.3rem;
+    width: 100%;
+    max-width: 260px;
+    min-width: unset;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .hero {
+    padding-top: clamp(50px, 3vh, 65px);
+    padding-bottom: clamp(15px, 1.5vh, 30px);
   }
 
   .heroTitle {
@@ -326,9 +416,37 @@
     font-size: clamp(1rem, 2.8vw, 1.1rem);
   }
 
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
   .primaryAction,
   .secondaryAction {
-    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
-    padding: clamp(0.9rem, 2.2vw, 1rem) clamp(1.5rem, 3.5vw, 1.75rem);
+    font-size: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    width: 100%;
+    max-width: 240px;
+    min-width: unset;
+    justify-content: center;
+    gap: 4px;
+  }
+}
+
+/* Extra responsive adjustments for button icons */
+@media (max-width: 640px) {
+  .primaryAction svg,
+  .secondaryAction svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .primaryAction svg,
+  .secondaryAction svg {
+    width: 12px;
+    height: 12px;
   }
 }
